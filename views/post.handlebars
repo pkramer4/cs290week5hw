@@ -1,0 +1,36 @@
+<style>
+  table, td, th, caption {border: 1px solid black;}
+  table {margin: auto;}
+</style>
+
+<h1>{{type}} Request Processed{{end}}</h1>
+
+<table class = 'reqData'>
+  <caption>Request Data</caption>
+  <tr>
+    <th>Name</th>
+    <th>value</th>
+  </tr>
+  {{#each req_list}}
+  <tr>
+    <td>{{this.key}}</td>
+    <td>{{this.value}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+<p class = 'blankLine'></p>
+
+<table class = 'bodyData'>
+  <caption>Body Data</caption>
+  <tr>
+    <th>Name</th>
+    <th>value</th>
+  </tr>
+  {{#each body_list}}
+  <tr>
+    <td>{{this.key}}</td>
+    <td>{{this.value}}</td>
+  </tr>
+  {{/each}}
+</table>

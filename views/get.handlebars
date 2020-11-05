@@ -1,0 +1,23 @@
+
+<!-- <link rel="stylesheet" href="style.css"> -->
+
+<style>
+  table, td, th {border: 1px solid black;}
+  table {margin: auto;}
+</style>
+
+<h1>{{type}} Request Processed{{end}}</h1>
+<div class = 'tableDiv'>
+<table>
+  <tr>
+    <th>key</th>
+    <th>value</th>
+  </tr>
+  {{#each context_list}}
+  <tr>
+    <td>{{this.key}}</td>
+    <td>{{this.value}}</td>
+  </tr>
+  {{/each}}
+</table>
+</div>

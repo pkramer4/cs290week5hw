@@ -1,0 +1,19 @@
+{
+  "name": "CS290_HW5",
+  "version": "1.0.0",
+  "description": "GET and POST requests with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kramerp",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.11.3",
+    "handlebars": "^4.7.6",
+    "mysql": "^2.8.0"
+  }
+}
