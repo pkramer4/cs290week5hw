@@ -9,8 +9,10 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 25369);
+app.set('port', process.argv[2]);
 
+
+//renders get request page with tables
 app.get('/',function(req,res){
   query_list = []
   for (key in req.query) {
@@ -18,7 +20,7 @@ app.get('/',function(req,res){
   }
   var context = {};
 
-  // changes type of request received when get request submitted
+  // changes text of request received in h1 tag when get request submitted
   if (query_list.length == 0) {
     context.type = '';
     context.end = ': none yet';
@@ -31,12 +33,17 @@ app.get('/',function(req,res){
   res.render('get', context);
 });
 
+
+//renders post request page with tables
 app.post('/', function(req,res){
+
+  //pulls data from request body
   var body_list = [];
   for (var key in req.body){
     body_list.push({key:key,value:req.body[key]})
   }
 
+  //pulls data from request header
   req_list = []
   for (key in req.query) {
     req_list.push({key: key, value: req.query[key]});

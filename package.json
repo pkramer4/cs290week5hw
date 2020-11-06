@@ -13,6 +13,7 @@
     "express": "^4.13.2",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.11.3",
+    "forever": "^3.0.2",
     "handlebars": "^4.7.6",
     "mysql": "^2.8.0"
   }
